@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Products = (props) => {
   const { item } = props;
   return (
     <Link href={`/product/${item.id}`} passHref>
       <div className="relative overflow-hidden flex items-center shadow-sm hover:shadow-lg rounded-md h-96">
-        <img
+        <Image
           className="object-cover w-full h-full hover:scale-125 hover:transition hover:duration-500"
-          src={item.images}
-          alt={item.images}
+          src={"/" + item.images}
+          alt={item.name}
+          width={600}
+          height={800}
         />
         <div className="card-label absolute flex justify-between top-0 w-full">
           <span className="leading-none text-sm text-center pt-1.5 pb-1.5 px-2.5 capitalize font-normal font-f-poppins bg-teal-600 text-white">
