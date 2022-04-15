@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ActiveLink from "./ActiveLink";
+import ActiveLink from "./activeLink";
 
 const Navbar = () => {
   return (
