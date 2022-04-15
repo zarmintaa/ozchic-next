@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     }
     return res
       .status(200)
-      .json({ message: "Success get data", data: searchProduct });
+      .json({ message: "Success get data", products: searchProduct });
   }
   const data = Product.findAll();
-  res.status(200).json(data);
+  res.status(200).json({ message: "Success get data", products: data });
 }

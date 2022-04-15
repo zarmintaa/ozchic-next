@@ -5,5 +5,5 @@ export default function handler(req, res) {
   const singleProdict = Product.findById(+pid);
   res
     .status(200)
-    .json({ message: "Success get data", products: singleProdict });
+    .json({ message: "Success get data", products: [singleProdict] });
 }
