@@ -32,12 +32,9 @@ const Products = (props) => {
         </div>
         <div className="absolute bottom-0 flex flex-col gap-3 w-full bg-white text-black font-f-poppins">
           <div className="px-4 py-2 flex flex-col gap-1">
-            <h2 className="text-lg">{item.name}</h2>
+            <h2 className="text-lg line-clamp-2">{item.name}</h2>
             <div className="flex gap-2 items-center">
               <h1 className="text-lg font-semibold ">Rp. {item.price}</h1>
-              {/* <h1 className="text-2xl text-teal-500 font-medium">
-              IDR {item.price * item.discount}
-            </h1> */}
             </div>
           </div>
         </div>
