@@ -18,14 +18,14 @@ const Footer = () => {
               <span>SHIPPING</span>
               <div className="flex gap-5 items-center">
                 <Image
-                  src={"/" + "./images/assets/static/footer/jne.png"}
+                  src={"/images/assets/static/footer/jne.png"}
                   width={64}
                   height={26}
                   alt="jne"
                 />
 
                 <Image
-                  src={"/" + "./images/assets/static/footer/jnt.png"}
+                  src={"/images/assets/static/footer/jnt.png"}
                   width={120}
                   height={26}
                   alt="jnt"
@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <span>PAYMENT BANK TRANSFER</span>
               <Image
-                src={"/" + "./images/assets/static/footer/Group 193.png"}
+                src={"/images/assets/static/footer/Group 193.png"}
                 width={180}
                 height={26}
                 layout="fixed"
@@ -49,7 +49,7 @@ const Footer = () => {
               <span>ONLINE PAYMENT</span>
               <div>
                 <Image
-                  src={"/" + "./images/assets/static/footer/Group 194.png"}
+                  src={"/images/assets/static/footer/Group 194.png"}
                   width={180}
                   height={59}
                   layout="fixed"
@@ -78,12 +78,15 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-1/2">
-            <img
-              src="./images/assets/static/footer/Group 108.png"
-              className="w-full object-cover"
+            <Image
+              src="/images/assets/static/footer/Group 108.png"
+              className="w-full object-cover h-full"
               alt="ozchic"
+              width={310}
+              height={180}
+              layout="fixed"
             />
-            <div className="flex items-center justify-center mt-5">
+            <div className="flex items-center justify-center mt-2">
               <button className="bg-black text-white font-f-poppins w-full py-2 rounded-tr-md rounded-bl-md text-xl ">
                 Go To Gallery
               </button>
