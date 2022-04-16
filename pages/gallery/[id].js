@@ -7,12 +7,6 @@ const DetailProduct = () => {
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isLoading) {
-      setProduct({});
-    }
-  }, [isLoading]);
-
   const getProduct = useCallback(async () => {
     const response = await fetch(`/api/v1/products/${id}`);
     const result = await response.json();
@@ -32,8 +26,9 @@ const DetailProduct = () => {
             alt={product.name}
             className="lg:w-1/2 w-full object-cover object-center rounded border h-[600px] border-gray-200"
             src={"/" + product.images}
-            width={590}
+            width={490}
             height={600}
+            layout="fixed"
           />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 mx-auto lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
