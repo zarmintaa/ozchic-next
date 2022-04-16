@@ -4,7 +4,7 @@ import Image from "next/image";
 const Products = (props) => {
   const { item } = props;
   return (
-    <Link href={`/product/${item.id}`} passHref>
+    <Link href={`/gallery/${item.id}`} passHref>
       <div className="relative overflow-hidden flex items-center shadow-sm hover:shadow-lg rounded-md h-96">
         <Image
           className="object-cover w-full h-full hover:scale-125 hover:transition hover:duration-500"

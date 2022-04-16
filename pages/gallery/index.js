@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import Products from "../components/gallery/Product";
-import Loading from "../components/UI/Loading";
+import Products from "../../components/gallery/Product";
+import Loading from "../../components/UI/Loading";
 const Gallery = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -201,14 +201,6 @@ const Gallery = () => {
                     />
                   </div>
                 </div>
-                {/* <div className="p-2">
-                  <button
-                    type="submit"
-                    className="text-center w-full py-2 rounded-lg bg-teal-500 text-white"
-                  >
-                    Seach
-                  </button>
-                </div> */}
               </form>
             </li>
           </ul>
