@@ -78,7 +78,7 @@ const Gallery = () => {
               onClick={() => setSidebarToggle(!sidebarToggle)}
               type="button"
             >
-              <span>Close Sidebar</span>
+              <span>Minimize Sidebar</span>
             </button>
           </div>
           <div className="overflow-y-auto py-4 px-3">
