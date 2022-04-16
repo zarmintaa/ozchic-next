@@ -12,6 +12,7 @@ const Products = (props) => {
           alt={item.name}
           width={600}
           height={800}
+          loading="eager"
         />
         <div className="card-label absolute flex justify-between top-0 w-full">
           <span className="leading-none text-sm text-center pt-1.5 pb-1.5 px-2.5 capitalize font-normal font-f-poppins bg-teal-600 text-white">
