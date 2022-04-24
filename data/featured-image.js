@@ -1,0 +1,88 @@
+const featuredImage = [
+  {
+    id: 1,
+    name: "Havva Scarf Walnut",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "scarf",
+    price: "99000",
+    ukuran: "120 x 120 cm",
+    finishing: "Walnut",
+    material: "Katun Voal",
+    deskripsi:
+      "Why OZCHIC Scarf? Terbuat dari serat alami sehingga adem dan nyaman digunakan. Cuaca panas tidak menjadi masalah karena dapat menyerap keringat dengan baik",
+    images: "images/scarf/HavvaScarf-Walnut.JPG",
+  },
+  {
+    id: 2,
+    name: "Hijab - Printed Scarf Backyard",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "hijab",
+    price: "259000",
+    ukuran: "120 x 120 cm",
+    finishing: "Jahit tepi rapi",
+    material: "100% cotton / voile / voal (no polyester)",
+    deskripsi:
+      "Why OZCHIC Scarf? Bahan 100% serat cotton / katun alami sehingga nyaman dan antigerah. Ramah lingkungan tidak mengandung polyester. Saatnya ganti hijab mu dengan yang eco friendly. The design is original, unique and authentic made with love and passion.",
+    images: "images/hijab/Hijab-PrintedScarfBackyard.jpeg",
+  },
+  {
+    id: 3,
+    name: "Typo Design - Designer",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "totebag",
+    price: "99000",
+    ukuran: "40 x 33 cm",
+    finishing: "",
+    material: "100% cotton canvas (no polyester)",
+    deskripsi:
+      "Why OZCHIC Tote Bag? Bahan 100% cotton canvas, tebal, kuat, namun tetap lentur dan tidak kaku. Ramah lingkungan (eco friendly) karena tidak mengandung polyester.",
+    images: "images/totebag/Totebag-Typo(Designer).jpeg",
+  },
+  {
+    id: 4,
+    name: "Kama Shawl Skin - Pashmina",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "pashmina",
+    price: "59000",
+    ukuran: "175 x 75 cm",
+    finishing: "Jahit tepi rapi",
+    material: "",
+    deskripsi:
+      "Why OZCHIC Shawl? Bahannya nyaman, lembut dan lentur sehingga mudah diatur. Terlihat elegan karena bahannya jatuh dan tidak mudah kusut.",
+    images: "images/shawl/KamaShawl-Skin(Pashmina).jpeg",
+  },
+  {
+    id: 5,
+    name: "Kama Shawl Carrot - Pashmina",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "pashmina",
+    price: "59000",
+    ukuran: "175 x 75 cm",
+    finishing: "Jahit tepi rapi",
+    material: "",
+    deskripsi:
+      "Why OZCHIC Shawl? Bahannya nyaman, lembut dan lentur sehingga mudah diatur. Terlihat elegan karena bahannya jatuh dan tidak mudah kusut.",
+    images: "images/shawl/KamaShawlCarrot(Pashmina).jpeg",
+  },
+  {
+    id: 6,
+    name: "Royal Blue Tie Dye",
+    kondisi: "Baru",
+    berat: "250 Gram",
+    kategori: "totebag",
+    price: "99000",
+    ukuran: "40 x 33 cm",
+    finishing: "",
+    material: "100% cotton canvas (no polyester)",
+    deskripsi:
+      "Why OZCHIC Tote Bag? Bahan 100% cotton canvas, tebal, kuat, namun tetap lentur dan tidak kaku. Ramah lingkungan (eco friendly) karena tidak mengandung polyester.",
+    images: "images/totebag/RoyalBlueTieDye.jpg",
+  },
+];
+
+export default featuredImage;

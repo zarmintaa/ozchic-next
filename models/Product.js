@@ -1,4 +1,6 @@
-const products = require("../data/products");
+// const products = require("../data/products");
+
+import products from "../data/products";
 
 class Product {
   static findAll() {
@@ -40,4 +42,4 @@ class Product {
   }
 }
 
-module.exports = Product;
+export default Product;

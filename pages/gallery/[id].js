@@ -21,16 +21,16 @@ const DetailProduct = () => {
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
       <div className="container px-5 py-5 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap">
+        <div className="lg:w-4/5 mx-auto grid grid-cols-2">
           <Image
             alt={product.name}
             className="lg:w-1/2 w-full object-cover object-center rounded border h-[600px] border-gray-200"
             src={"/" + product.images}
-            width={490}
+            width={400}
             height={600}
-            layout="fixed"
+            layout="intrinsic"
           />
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 mx-auto lg:mt-0">
+          <div className=" w-full lg:pl-10 lg:py-6 mt-6 mx-auto lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               OZCHIC COLLECTION
             </h2>
