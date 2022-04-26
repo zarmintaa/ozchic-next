@@ -21,10 +21,10 @@ const DetailProduct = () => {
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
       <div className="container px-5 py-5 mx-auto">
-        <div className="lg:w-4/5 mx-auto grid grid-cols-2">
+        <div className="lg:w-4/5 mx-auto grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
           <Image
             alt={product.name}
-            className="lg:w-1/2 w-full object-cover object-center rounded border h-[600px] border-gray-200"
+            className=" w-full object-cover object-center rounded border border-gray-200"
             src={"/" + product.images}
             width={400}
             height={600}

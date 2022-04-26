@@ -10,8 +10,8 @@ const Products = (props) => {
           className="object-cover hover:scale-125 hover:transition hover:duration-500"
           src={"/" + item.images}
           alt={item.name}
-          width={360}
-          height={400}
+          width={400}
+          height={450}
           layout="fixed"
         />
         <div className="card-label absolute flex justify-between top-0 w-full">
