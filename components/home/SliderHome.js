@@ -1,12 +1,22 @@
+import Image from "next/image";
+
 const SliderHome = () => {
   return (
     <section className="min-h-screen">
       <div className="grid grid-cols-slider-top">
-        <div className=".content__item--left">
-          <img
-            className="w-full pb-5"
-            src="./images/assets/static/slider/1/slider_image_1-left.png"
-            alt="slider"
+        <div className=".content__item--left pb-5">
+          {/*<img*/}
+          {/*  className="w-full pb-5"*/}
+          {/*  src="./images/assets/static/slider/1/slider_image_1-left.png"*/}
+          {/*  alt="slider"*/}
+          {/*/>*/}
+          <Image
+            src={"/images/assets/static/slider/1/slider_image_1-left.png"}
+            alt="pict left"
+            className="w-full "
+            width={600}
+            height={700}
+            layout="responsive"
           />
         </div>
         <div className="flex flex-col justify-center items-center bg-black text-white">
@@ -35,11 +45,21 @@ const SliderHome = () => {
               your busy day.
             </p>
           </div>
-          <img
-            className="object-cover w-full mt-8"
-            src="./images/assets/static/slider/1/slider_image_1-right.png"
-            alt="slider"
-          />
+          {/*<img*/}
+          {/*  className="object-cover w-full mt-8"*/}
+          {/*  src="./images/assets/static/slider/1/slider_image_1-right.png"*/}
+          {/*  alt="slider"*/}
+          {/*/>*/}
+          <div className=" mt-8">
+            <Image
+              src="/images/assets/static/slider/1/slider_image_1-right.png"
+              alt="pict right"
+              width={500}
+              height={350}
+              className="object-cover w-full"
+              layout="responsive"
+            />
+          </div>
         </div>
       </div>
     </section>
