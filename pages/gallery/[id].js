@@ -128,7 +128,7 @@ const DetailProduct = () => {
             </div>
 
             <hr className="bg-gray-200 mb-5 mt-6" />
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center flex-wrap gap-0 sm:gap-5">
               <span className="title-font font-medium text-3xl text-gray-900">
                 Rp.{product.price}
               </span>

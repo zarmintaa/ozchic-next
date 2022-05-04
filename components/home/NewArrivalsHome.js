@@ -46,7 +46,7 @@ const NewArrivalsHome = () => {
       <div className="flex items-center justify-center mb-20 ">
         <h1 className="font-f-unna text-6xl">New Arrivals</h1>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-auto items-center justify-between w-8/12 font-f-unna gap-x-5 text-white gap-y-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-auto items-center justify-between w-full lg:w-8/12 font-f-unna gap-x-5 text-white gap-y-5">
         {products.map((item) => (
           <Products item={item} key={item.id} />
         ))}

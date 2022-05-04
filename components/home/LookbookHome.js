@@ -7,7 +7,7 @@ const LookbookHome = () => {
         <h1 className="font-f-unna text-6xl">LookBook</h1>
       </div>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mx-auto items-center justify-between w-8/12 font-f-unna text-white gap-5">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mx-auto items-center justify-between w-full lg:w-8/12 font-f-unna text-white gap-5">
         {/* Lookbook Card Home */}
         <div className="relative overflow-hidden flex items-center shadow-lg">
           {/*<img*/}

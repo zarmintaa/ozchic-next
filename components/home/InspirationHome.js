@@ -6,14 +6,11 @@ const InspirationHome = () => {
       <div className="flex items-center justify-center py-16 ">
         <h1 className="font-f-unna text-6xl">Inspiration</h1>
       </div>
-      <div className="grid grid-cols-2 font-f-poppins+">
+      <div className="grid lg:grid-cols-2 font-f-poppins+">
         <div className="w-full h-full ">
-          {/*<img*/}
-          {/*    src="/images/assets/static/woman-in-yellow-winter-jacket.png"*/}
-          {/*    alt="inspiration"*/}
-          {/*/>*/}
           <Image
             src="/images/assets/static/woman-in-yellow-winter-jacket.png"
+            className="object-cover content-center"
             width={500}
             height={500}
             alt="inspiration"

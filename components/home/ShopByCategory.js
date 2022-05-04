@@ -30,13 +30,13 @@ const ShopByCategory = (props) => {
         <h1 className="font-f-unna text-6xl">Shop By Category</h1>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto items-center justify-between w-8/12 font-dm-sans font-semibold gap-5 text-black">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto items-center justify-between w-full lg:w-8/12 font-dm-sans font-semibold gap-5 text-black">
         {categoryData.map((category) => (
           <div
             key={category.id}
             className="relative overflow-hidden grid  grid-cols-1 lg:grid-cols-2 items-center h-80 bg-white shadow-sm hover:shadow-lg rounded-md"
           >
-            <div className="w-full h-full">
+            <div className="w-full h-[700px] lg:h-full">
               {/*<img*/}
               {/*  className="w-full h-full object-cover "*/}
               {/*  src={category.image}*/}
@@ -46,7 +46,7 @@ const ShopByCategory = (props) => {
                 src={category.image}
                 alt={category.title}
                 width={250}
-                height={350}
+                height={400}
                 layout="responsive"
               />
             </div>

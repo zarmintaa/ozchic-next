@@ -2,24 +2,17 @@ import Image from "next/image";
 
 const SliderHome = () => {
   return (
-    <section className="min-h-screen">
-      <div className="grid grid-cols-slider-top">
-        <div className=".content__item--left pb-5">
-          {/*<img*/}
-          {/*  className="w-full pb-5"*/}
-          {/*  src="./images/assets/static/slider/1/slider_image_1-left.png"*/}
-          {/*  alt="slider"*/}
-          {/*/>*/}
+    <section className="h-auto w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-slider-top">
+        <div className="content__item--left pb-5 hidden md:block">
           <Image
             src={"/images/assets/static/slider/1/slider_image_1-left.png"}
             alt="pict left"
-            className="w-full "
             width={600}
             height={700}
-            layout="responsive"
           />
         </div>
-        <div className="flex flex-col justify-center items-center bg-black text-white">
+        <div className="flex flex-col justify-center items-center bg-black text-white hidden  lg:flex">
           <div className="flex flex-col w-2/4">
             <h1 className="font-f-unna text-center whitespace-nowrap inline text-10xl font-semibold">
               5%
@@ -54,10 +47,9 @@ const SliderHome = () => {
             <Image
               src="/images/assets/static/slider/1/slider_image_1-right.png"
               alt="pict right"
-              width={500}
-              height={350}
+              width={800}
+              height={500}
               className="object-cover w-full"
-              layout="responsive"
             />
           </div>
         </div>

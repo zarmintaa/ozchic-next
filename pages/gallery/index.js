@@ -7,7 +7,7 @@ const Gallery = () => {
   const [isLoading, setIsLoading] = useState(true);
   const searchInput = useRef("");
   const [toggle, setToggle] = useState(false);
-  const [sidebarToggle, setSidebarToggle] = useState(true);
+  const [sidebarToggle, setSidebarToggle] = useState(false);
   const [hidden, setHidden] = useState(false);
 
   const router = useRouter();

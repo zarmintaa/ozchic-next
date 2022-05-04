@@ -3,7 +3,7 @@ import ActiveLink from "./activeLink";
 
 const Navbar = () => {
   return (
-    <div className="w-full border-b border-solid">
+    <div className=" border-b border-solid">
       <header className="flex py-6 w-full px-6 mx-auto items-center">
         <nav className="flex w-full justify-between items-center">
           <div className="flex text-center gap-8">
@@ -44,14 +44,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex gap-2">
-            <div className="flex gap-5 items-center">
-              <i className="fa-solid fa-magnifying-glass text-xl"></i>
-              <input
-                className="w-full text-sm  font-light font-tiny text-black font-f-poppins  focus:outline-none"
-                type="text"
-                placeholder="Search"
-              />
-            </div>
+            {/*<div className="flex gap-5 items-center">*/}
+            {/*  <i className="fa-solid fa-magnifying-glass text-xl"></i>*/}
+            {/*  <input*/}
+            {/*    className="w-full text-sm  font-light font-tiny text-black font-f-poppins  focus:outline-none"*/}
+            {/*    type="text"*/}
+            {/*    placeholder="Search"*/}
+            {/*  />*/}
+            {/*</div>*/}
             <div className="flex justify-end gap-x-4">
               <Link href="/" passHref>
                 <i className="fa-brands fa-facebook-square text-2xl "></i>
