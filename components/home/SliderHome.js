@@ -31,7 +31,7 @@ const SliderHome = () => {
           </div>
         </div>
         <div className=".content__item--right">
-          <div className="pt-16 px-10 font-f-poppins">
+          <div className="pt-16 px-5 lg:px-10 font-f-poppins">
             <hr className="border bg-black border-solid border-black mb-6" />
             <p className=" ">
               A well made shawls in nude shade color to make you #staychic along
@@ -43,13 +43,14 @@ const SliderHome = () => {
           {/*  src="./images/assets/static/slider/1/slider_image_1-right.png"*/}
           {/*  alt="slider"*/}
           {/*/>*/}
-          <div className=" mt-8">
+          <div className="px-5 lg:px-0 mt-8">
             <Image
               src="/images/assets/static/slider/1/slider_image_1-right.png"
               alt="pict right"
               width={800}
               height={500}
               className="object-cover w-full"
+              layout={"responsive"}
             />
           </div>
         </div>

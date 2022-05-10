@@ -25,12 +25,12 @@ const categoryData = [
 
 const ShopByCategory = (props) => {
   return (
-    <div className="bg-gray-200 min-h-screen py-20">
+    <div className="bg-gray-200 min-h-screen py-10 lg:py-20">
       <div className="flex items-center justify-center mb-20">
-        <h1 className="font-f-unna text-6xl">Shop By Category</h1>
+        <h1 className="font-f-unna text-5xl lg:text-6xl">Shop By Category</h1>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto items-center justify-between w-full lg:w-8/12 font-dm-sans font-semibold gap-5 text-black">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-0 mx-auto items-center justify-between w-full lg:w-8/12 font-dm-sans font-semibold gap-5 text-black">
         {categoryData.map((category) => (
           <div
             key={category.id}

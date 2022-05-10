@@ -3,9 +3,9 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer>
-      <div className="grid grid-cols-2 w-10/12 mx-auto py-10 font-f-poppins gap-x-12">
-        <div className="flex gap-x-5">
-          <div className="w-1/2">
+      <div className="grid lg:grid-cols-2 w-10/12 mx-auto py-10 font-f-poppins gap-x-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-5">
+          <div className="">
             <ul className="flex flex-col leading-loose">
               <li className="font-bold">ABOUT</li>
               <li>HOW TO SHOP</li>
@@ -14,7 +14,7 @@ const Footer = () => {
               <li>RETURN, EXCHANGE, & REFOUND</li>
             </ul>
 
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="mt-5 grid  gap-2">
               <span>SHIPPING</span>
               <div className="flex gap-5 items-center">
                 <Image
@@ -34,8 +34,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="flex flex-col gap-2">
+          <div className="">
+            <div className="grid gap-2">
               <span>PAYMENT BANK TRANSFER</span>
               <Image
                 src={"/images/assets/static/footer/Group 193.png"}
@@ -45,7 +45,7 @@ const Footer = () => {
                 alt="jne"
               />
             </div>
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="mt-5 grid  gap-2">
               <span>ONLINE PAYMENT</span>
               <div>
                 <Image
@@ -59,8 +59,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-1/2 flex flex-col gap-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 mt-10 lg:mt-0">
+          <div className=" grid gap-2">
             <span className="font-semibold">CONTACT</span>
             <ul className="flex flex-col gap-2 leading-loose">
               <li className="flex gap-2 items-center">
@@ -77,7 +77,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-1/2">
+          <div className="mt-5 lg:m-0">
             <Image
               src="/images/assets/static/footer/Group 108.png"
               className="w-full object-cover h-full"
@@ -86,8 +86,8 @@ const Footer = () => {
               height={180}
               layout="fixed"
             />
-            <div className="flex items-center justify-center mt-2">
-              <button className="bg-black text-white font-f-poppins w-full py-2 rounded-tr-md rounded-bl-md text-xl ">
+            <div className="flex items-center  mt-2">
+              <button className="bg-black text-white font-f-poppins min-w-[310px]  lg:w-full py-2 rounded-tr-md rounded-bl-md text-xl ">
                 Go To Gallery
               </button>
             </div>

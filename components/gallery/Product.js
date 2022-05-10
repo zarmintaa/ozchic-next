@@ -31,7 +31,7 @@ const Products = (props) => {
             )}
           </div>
         </div>
-        <div className="absolute bottom-0 flex flex-col gap-3 w-full bg-white text-black font-f-poppins">
+        <div className="absolute bottom-0 flex flex-col gap-3 w-[400px] lg:w-full bg-white text-black font-f-poppins">
           <div className="px-4 py-2 flex flex-col gap-1">
             <h2 className="text-lg line-clamp-2">{item.name}</h2>
             <div className="flex gap-2 items-center">
