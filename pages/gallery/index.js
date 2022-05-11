@@ -8,7 +8,7 @@ const Gallery = () => {
   const searchInput = useRef("");
   const [toggle, setToggle] = useState(false);
   const [sidebarToggle, setSidebarToggle] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [getQuery, setGetQuery] = useState("");
 
   const router = useRouter();
 
@@ -18,17 +18,32 @@ const Gallery = () => {
     }
   }, [isLoading]);
 
-  const fetchProductHandler = useCallback(async (path) => {
-    fetch(`/api/v1/products${path}`)
+  useEffect(() => {
+    const queryCategory = router.query.category;
+    if (queryCategory === "hijab") {
+      setGetQuery(`/category?category=hijab`);
+    } else if (queryCategory === "pashmina") {
+      setGetQuery("/category?category=pashmina");
+    } else if (queryCategory === "scraf") {
+      setGetQuery("/category?category=scraf");
+    } else if (queryCategory === "totebag") {
+      setGetQuery("/category?category=totebag");
+    } else {
+      setGetQuery("");
+    }
+  }, [router.query]);
+
+  const fetchProductHandler = useCallback(async () => {
+    fetch(`/api/v1/products${getQuery}`)
       .then((res) => res.json())
       .then((result) => {
         setProducts(result.products);
         setIsLoading(false);
       });
-  }, []);
+  }, [getQuery]);
 
   useEffect(() => {
-    fetchProductHandler("");
+    fetchProductHandler();
   }, [fetchProductHandler]);
 
   const searchHandler = (e) => {
@@ -42,7 +57,6 @@ const Gallery = () => {
       .then((res) => res.json())
       .then((results) => {
         setProducts(results.products);
-        console.log(results.products);
         setIsLoading(false);
       });
   };
@@ -57,23 +71,6 @@ const Gallery = () => {
             >
               Open Sidebar
             </button>
-            {/* <button
-              onClick={() => setSidebarToggle(!sidebarToggle)}
-              type="button"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button> */}
           </div>
         </div>
       )}
@@ -91,7 +88,7 @@ const Gallery = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => fetchProductHandler("")}
+                  onClick={() => router.push("/gallery")}
                   type="button"
                   className="flex items-center p-2 w-full text-base group font-normal text-gray-900 rounded-lg  hover:bg-gray-100"
                 >
@@ -169,9 +166,7 @@ const Gallery = () => {
                 >
                   <li>
                     <button
-                      onClick={() =>
-                        fetchProductHandler("/category?category=hijab")
-                      }
+                      onClick={() => router.push("?category=hijab")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -180,9 +175,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() =>
-                        fetchProductHandler("/category?category=pashmina")
-                      }
+                      onClick={() => router.push("?category=pashmina")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -191,9 +184,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() =>
-                        fetchProductHandler("/category?category=scarf")
-                      }
+                      onClick={() => router.push("?category=scarf")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -202,9 +193,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() =>
-                        fetchProductHandler("/category?category=totebag")
-                      }
+                      onClick={() => router.push("?category=totebag")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >

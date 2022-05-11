@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { router } from "next/client";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="grid lg:grid-cols-2 w-10/12 mx-auto py-10 font-f-poppins gap-x-12">
+      <div className="grid lg:grid-cols-2 w-full px-5 lg:px-0 mx-auto py-10 font-f-poppins gap-x-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-5">
           <div className="">
             <ul className="flex flex-col leading-loose">
@@ -84,10 +85,14 @@ const Footer = () => {
               alt="ozchic"
               width={310}
               height={180}
-              layout="fixed"
+              layout="responsive"
             />
             <div className="flex items-center  mt-2">
-              <button className="bg-black text-white font-f-poppins min-w-[310px]  lg:w-full py-2 rounded-tr-md rounded-bl-md text-xl ">
+              <button
+                type="button"
+                onClick={() => router.push("/gallery")}
+                className="bg-black text-white font-f-poppins w-full py-2 rounded-tr-md rounded-bl-md text-xl "
+              >
                 Go To Gallery
               </button>
             </div>

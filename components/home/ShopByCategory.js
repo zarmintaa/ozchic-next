@@ -37,16 +37,11 @@ const ShopByCategory = (props) => {
             className="relative overflow-hidden grid  grid-cols-1 lg:grid-cols-2 items-center h-80 bg-white shadow-sm hover:shadow-lg rounded-md"
           >
             <div className="w-full h-[700px] lg:h-full">
-              {/*<img*/}
-              {/*  className="w-full h-full object-cover "*/}
-              {/*  src={category.image}*/}
-              {/*  alt={category.title}*/}
-              {/*/>*/}
               <Image
                 src={category.image}
                 alt={category.title}
                 width={250}
-                height={400}
+                height={330}
                 layout="responsive"
               />
             </div>

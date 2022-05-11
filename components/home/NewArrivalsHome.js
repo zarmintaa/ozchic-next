@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Products from "../gallery/Product";
-
+import { router } from "next/client";
 
 const NewArrivalsHome = () => {
   const [products, setProducts] = useState([]);
@@ -26,7 +26,11 @@ const NewArrivalsHome = () => {
         ))}
       </div>
       <div className="flex justify-center mt-20">
-        <button className="bg-black text-white font-f-poppins px-10 py-2 rounded-tr-lg rounded-bl-lg text-xl ">
+        <button
+          type="button"
+          onClick={() => router.push("/gallery")}
+          className="bg-black text-white font-f-poppins px-10 py-2 rounded-tr-lg rounded-bl-lg text-xl "
+        >
           Go To Gallery
         </button>
       </div>
