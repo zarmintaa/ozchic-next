@@ -5,7 +5,7 @@ const Footer = () => {
   const router = useRouter();
   return (
     <footer>
-      <div className="grid lg:grid-cols-2 w-full px-5 lg:px-0 mx-auto py-10 font-f-poppins gap-x-12">
+      <div className="grid lg:grid-cols-2 w-full lg:w-10/12 px-5 lg:px-0 mx-auto py-10 font-f-poppins gap-x-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-5">
           <div className="">
             <ul className="flex flex-col leading-loose">
