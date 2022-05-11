@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { router } from "next/client";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer>
       <div className="grid lg:grid-cols-2 w-full px-5 lg:px-0 mx-auto py-10 font-f-poppins gap-x-12">

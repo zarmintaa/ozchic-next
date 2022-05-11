@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Products from "../gallery/Product";
-import { router } from "next/client";
+import { useRouter } from "next/router";
 
 const NewArrivalsHome = () => {
   const [products, setProducts] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     fetch("/api/v1/products/featured")
