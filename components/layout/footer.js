@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="mt-5 lg:mt-0">
             <div className="grid gap-2">
               <span>PAYMENT BANK TRANSFER</span>
               <Image

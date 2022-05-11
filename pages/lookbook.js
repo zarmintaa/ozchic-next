@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Lookbook = () => {
   return (
-    <div className="mb-10 w-9/12 mx-auto">
+    <div className="mb-10 w-full lg:w-9/12 px-5 lg:px-0 mx-auto">
       <div className="text-center py-16">
         <h1 className="font-f-unna text-5xl">LookBook</h1>
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 gap-5">
         <Image
           src="/images/assets/static/lookbook/lookbook-model.png"
           alt="lookbook"

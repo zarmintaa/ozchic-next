@@ -3,7 +3,7 @@ const Inspiration = () => {
   const image1 =
     "/images/assets/static/inspiration/street-photography-of-woman-wearing-blue-coat.png";
   return (
-    <div className="grid grid-cols-2 my-10 min-h-screen">
+    <div className="grid lg:grid-cols-2 px-5 lg:px-0 my-10 min-h-screen">
       <Image
         src={image1}
         height={720}
@@ -12,7 +12,7 @@ const Inspiration = () => {
         className="object-cover w-full h-full"
         layout="responsive"
       />
-      <div className="px-36">
+      <div className="px-5 lg:px-36">
         <h1 className="font-semibold font-f-poppins text-3xl text-slate-700 mt-20 leading-relaxed">
           Here are the tittle of the article you write for your site
         </h1>
@@ -39,7 +39,7 @@ const Inspiration = () => {
           vel, volutpat nisl. Aenean lorem massa, molestie non libero a, posuere
           rutrum diam. Mauris scelerisque congue justo,
         </p>
-        <button className="mt-10 bg-white text-slate-900 px-10 py-2 rounded-md border-2 font-f-poppins font-semibold border-slate-900">
+        <button className="mt-10 bg-white hover:bg-gray-200 text-slate-900 px-10 py-2 rounded-md border-2 font-f-poppins font-semibold border-slate-900">
           Read More
         </button>
       </div>
