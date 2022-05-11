@@ -1,5 +1,3 @@
-// const products = require("../data/products");
-
 import products from "../data/products";
 
 class Product {
