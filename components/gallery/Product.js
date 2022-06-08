@@ -8,7 +8,7 @@ const Products = (props) => {
       <div className="relative overflow-hidden flex items-center shadow-sm hover:shadow-lg rounded-md">
         <Image
           className="object-cover hover:scale-125 hover:transition hover:duration-500"
-          src={"/" + item.images}
+          src={"/" + item.image}
           alt={item.name}
           width={400}
           height={450}
@@ -16,7 +16,7 @@ const Products = (props) => {
         />
         <div className="card-label absolute flex justify-between top-0 w-full">
           <span className="leading-none text-sm text-center pt-1.5 pb-1.5 px-2.5 capitalize font-normal font-f-poppins bg-teal-600 text-white">
-            {item.kategori}
+            {item.category}
           </span>
           {item.discount && (
             <div className="rounded-full bg-teal-500 w-16 h-16 font-f-poppins font-semibold text-2xl items-center flex text-white justify-center">

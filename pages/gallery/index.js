@@ -1,16 +1,31 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
+import { useCallback, useEffect, useState } from "react";
 import Products from "../../components/gallery/Product";
 import Loading from "../../components/UI/Loading";
-const Gallery = () => {
-  const [products, setProducts] = useState([]);
+import CategoryHelper from "./../../lib/ProductHelper";
+const Gallery = ({ dataProducts }) => {
+  const [products, setProducts] = useState(dataProducts);
   const [isLoading, setIsLoading] = useState(true);
-  const searchInput = useRef("");
   const [toggle, setToggle] = useState(false);
   const [sidebarToggle, setSidebarToggle] = useState(false);
-  const [getQuery, setGetQuery] = useState("");
+  const [categoryProduct, setCategoryProduct] = useState("");
 
-  const router = useRouter();
+  const fetchProductHandler = useCallback(
+    (category) => {
+      setProducts(CategoryHelper.getProductByCategory(dataProducts, category));
+      setIsLoading(false);
+    },
+    [dataProducts]
+  );
+
+  const searchChangeHandler = (e) => {
+    e.preventDefault();
+    const search = e.target.value;
+    if (search === "") {
+      setProducts(dataProducts);
+    }
+
+    setProducts(CategoryHelper.searchProductByTitle(dataProducts, search));
+  };
 
   useEffect(() => {
     if (isLoading) {
@@ -19,47 +34,9 @@ const Gallery = () => {
   }, [isLoading]);
 
   useEffect(() => {
-    const queryCategory = router.query.category;
-    if (queryCategory === "hijab") {
-      setGetQuery(`/category?category=hijab`);
-    } else if (queryCategory === "pashmina") {
-      setGetQuery("/category?category=pashmina");
-    } else if (queryCategory === "scraf") {
-      setGetQuery("/category?category=scraf");
-    } else if (queryCategory === "totebag") {
-      setGetQuery("/category?category=totebag");
-    } else {
-      setGetQuery("");
-    }
-  }, [router.query]);
+    fetchProductHandler(categoryProduct);
+  }, [fetchProductHandler, categoryProduct]);
 
-  const fetchProductHandler = useCallback(async () => {
-    fetch(`/api/v1/products${getQuery}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setProducts(result.products);
-        setIsLoading(false);
-      });
-  }, [getQuery]);
-
-  useEffect(() => {
-    fetchProductHandler();
-  }, [fetchProductHandler]);
-
-  const searchHandler = (e) => {
-    e.preventDefault();
-    const search = searchInput.current.value;
-    if (search === "") {
-      return;
-    }
-    setIsLoading(true);
-    fetch(`/api/v1/products?title=${search}`)
-      .then((res) => res.json())
-      .then((results) => {
-        setProducts(results.products);
-        setIsLoading(false);
-      });
-  };
   return (
     <div className="flex">
       {!sidebarToggle && (
@@ -88,7 +65,7 @@ const Gallery = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => router.push("/gallery")}
+                  onClick={() => setCategoryProduct("")}
                   type="button"
                   className="flex items-center p-2 w-full text-base group font-normal text-gray-900 rounded-lg  hover:bg-gray-100"
                 >
@@ -166,7 +143,7 @@ const Gallery = () => {
                 >
                   <li>
                     <button
-                      onClick={() => router.push("?category=hijab")}
+                      onClick={() => setCategoryProduct("hijab")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -175,7 +152,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() => router.push("?category=pashmina")}
+                      onClick={() => setCategoryProduct("pashmina")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -184,7 +161,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() => router.push("?category=scarf")}
+                      onClick={() => setCategoryProduct("scarf")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -193,7 +170,7 @@ const Gallery = () => {
                   </li>
                   <li>
                     <button
-                      onClick={() => router.push("?category=totebag")}
+                      onClick={() => setCategoryProduct("totebag")}
                       type="button"
                       className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
                     >
@@ -203,7 +180,7 @@ const Gallery = () => {
                 </ul>
               </li>
               <li>
-                <form onSubmit={searchHandler}>
+                <form>
                   <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                     <label htmlFor="table-search" className="sr-only">
                       Search
@@ -224,11 +201,11 @@ const Gallery = () => {
                         </svg>
                       </div>
                       <input
-                        ref={searchInput}
                         type="text"
                         id="table-search"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none block pl-10 p-2.5 w-full "
                         placeholder="Search"
+                        onChange={searchChangeHandler}
                       />
                     </div>
                   </div>
@@ -246,7 +223,7 @@ const Gallery = () => {
             !sidebarToggle ? "mt-8" : ""
           }`}
         >
-          {products.map((item) => (
+          {products?.map((item) => (
             <Products item={item} key={item.id} />
           ))}
         </div>
@@ -256,3 +233,15 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+export async function getStaticProps(context) {
+  // const res = await fetch("http://localhost:3000/api/v1/products");
+  const res = await fetch("https://ozchic-next.vercel.app/api/v1/products");
+  const data = await res.json();
+
+  return {
+    props: {
+      dataProducts: data.products,
+    }, // will be passed to the page component as props
+  };
+}

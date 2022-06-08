@@ -11,8 +11,8 @@ const Lookbook = () => {
           src="/images/assets/static/lookbook/lookbook-model.png"
           alt="lookbook"
           className="object-cover w-full h-full"
-          width={660}
-          height={680}
+          width={700}
+          height={800}
         />
         <div className="flex flex-col py-5 relative">
           <hr className="bg-black" />

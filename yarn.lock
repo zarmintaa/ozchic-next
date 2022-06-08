@@ -465,6 +465,11 @@ chownr@^1.1.1:
   resolved "https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz"
@@ -1837,6 +1842,13 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-toastify@^9.0.3:
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-9.0.3.tgz#8e6d22651c85cb584c5ebd0b5e2c3bf0d7ec06ee"
+  integrity sha512-0QZJk0SqYBxouRBGCFU3ymvjlwimRRhVH7SzqGRiVrQ001KSoUNbGKx9Yq42aoPv18n45yJzEFG82zqv3HnASg==
+  dependencies:
+    clsx "^1.1.1"
 
 react@18.0.0:
   version "18.0.0"

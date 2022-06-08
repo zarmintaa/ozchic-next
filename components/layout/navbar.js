@@ -1,9 +1,25 @@
 import Link from "next/link";
 import ActiveLink from "./activeLink";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { countFavProduct } from "../../lib/cart-product";
 
 const Navbar = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [cartIsFilled, setCartIsFilled] = useState(false);
+  const [favProducts, setFavProducts] = useState(0);
+
+  const getProductFromLocalstorage = useCallback(() => {
+    const countCart = countFavProduct();
+    if (countCart > 0) {
+      setFavProducts(countCart);
+    }
+    // console.log(countCart);
+  }, []);
+
+  useEffect(() => {
+    getProductFromLocalstorage();
+  }, [getProductFromLocalstorage]);
+
   return (
     <div className="border-b border-solid">
       <header className="hidden lg:flex py-6 w-full px-6 mx-auto items-center">
@@ -46,20 +62,18 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex gap-2">
-            {/*<div className="flex gap-5 items-center">*/}
-            {/*  <i className="fa-solid fa-magnifying-glass text-xl"></i>*/}
-            {/*  <input*/}
-            {/*    className="w-full text-sm  font-light font-tiny text-black font-f-poppins  focus:outline-none"*/}
-            {/*    type="text"*/}
-            {/*    placeholder="Search"*/}
-            {/*  />*/}
-            {/*</div>*/}
             <div className="flex justify-end gap-x-4">
-              <Link href="/" passHref>
-                <i className="fa-brands fa-facebook-square text-2xl "></i>
-              </Link>
-              <Link href="/" passHref>
-                <i className="fab fa-instagram text-2xl"></i>
+              <Link href="/cart" passHref>
+                <div className="relative">
+                  <button type="button" className="">
+                    <i className="fa-solid fa-cart-shopping text-2xl"></i>
+                  </button>
+                  {cartIsFilled && (
+                    <span className="absolute top-0 right-0 w-3.5 h-3.5 text-xs text-center rounded-lg bg-red-700 text-white">
+                      {1}
+                    </span>
+                  )}
+                </div>
               </Link>
             </div>
           </div>

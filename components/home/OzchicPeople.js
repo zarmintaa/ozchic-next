@@ -30,7 +30,7 @@ const OzchicPeople = () => {
   return (
     <div className="flex flex-col justify-center items-center p-5 lg:p-16">
       <h1 className="text-xl font-f-poppins font-semibold">#ozchicpeople</h1>
-      <div className="flex mt-6 gap-2 flex-wrap justify-center">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-6 gap-2  justify-center">
         {images.map((image) => (
           <div key={image.id}>
             <Image src={image.url} width={250} height={250} alt={image.alt} />

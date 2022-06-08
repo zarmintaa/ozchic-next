@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    width: 100% !important;
-    height: 100% !important;
-}
+/*html {*/
+/*    margin: 0 !important;*/
+/*    padding: 0 !important;*/
+/*    box-sizing: border-box !important;*/
+/*    width: 100% !important;*/
+/*    height: 100% !important;*/
+/*}*/

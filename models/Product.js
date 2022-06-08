@@ -30,7 +30,7 @@ class Product {
 
   static findByCategory(category) {
     const allProducts = products.filter(
-      (product) => product.kategori === category
+      (product) => product.category === category
     );
     if (allProducts && allProducts.length > 0) {
       return allProducts;

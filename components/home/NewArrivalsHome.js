@@ -14,7 +14,7 @@ const NewArrivalsHome = () => {
       });
   }, []);
 
-  if (products) console.log(products);
+  // if (products) console.log(products);
 
   return (
     <section className="bg-gray-100 py-10 lg:py-20">
