@@ -32,13 +32,12 @@ const OzchicPeople = () => {
       <h1 className="text-xl font-f-poppins font-semibold">#ozchicpeople</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-6 gap-2  justify-center">
         {images.map((image) => (
-          <div key={image.id}>
+          <div key={image.id} className="block">
             <Image
               src={image.url}
               width={250}
               height={250}
               alt={image.alt}
-              layout="responsive"
               objectPosition="center"
               loading="lazy"
             />
