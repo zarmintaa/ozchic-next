@@ -20,7 +20,7 @@ const LookbookHome = () => {
             />
           </div>
 
-          <div className="backdrop-brightness-90 bg-black/30 absolute w-full h-full"></div>
+          <div className="backdrop-brightness-50 bg-black/30 absolute w-full h-full"></div>
           <div className="absolute w-full bottom-10">
             <div className="w-9/12 mx-auto bottom-10 flex flex-col gap-10">
               <div className="font-f-unna">
@@ -46,7 +46,7 @@ const LookbookHome = () => {
               layout="responsive"
             />
           </div>
-          <div className="backdrop-brightness-90 bg-black/30 absolute w-full h-full"></div>
+          <div className="backdrop-brightness-50 bg-black/30 absolute w-full h-full"></div>
           <div className="absolute w-full bottom-10">
             <div className="w-9/12 mx-auto bottom-10 flex flex-col gap-10">
               <div className="font-f-unna">
