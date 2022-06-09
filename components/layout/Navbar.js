@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className="flex justify-end gap-x-4">
               <Link href="/cart" passHref>
                 <div className="relative">
-                  <button type="button" className="">
+                  <button type="button" aria-label="Toggle Button" className="">
                     <FontAwesomeIcon
                       icon={faShoppingCart}
                       className="text-2xl"
@@ -100,7 +100,7 @@ const Navbar = () => {
               <div className="flex justify-end gap-x-4">
                 <Link href="/cart" passHref>
                   <div className="relative">
-                    <button type="button" className="">
+                    <button type="button" aria-label="Cart Button" className="">
                       <FontAwesomeIcon
                         icon={faShoppingCart}
                         className="text-2xl"
@@ -121,6 +121,7 @@ const Navbar = () => {
               <div className="text-2xl">
                 <button
                   type="button"
+                  aria-label="X Button"
                   onClick={() => setSidebarToggle(!sidebarToggle)}
                 >
                   <FontAwesomeIcon icon={faX} />
@@ -145,7 +146,7 @@ const Navbar = () => {
               <div className="flex justify-end gap-x-4">
                 <Link href="/cart" passHref>
                   <div className="relative">
-                    <button type="button" className="">
+                    <button type="button" aria-label="Cart button">
                       <FontAwesomeIcon
                         icon={faShoppingCart}
                         className="text-2xl"
