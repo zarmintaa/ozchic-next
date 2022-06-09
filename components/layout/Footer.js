@@ -22,7 +22,7 @@ const Footer = () => {
 
             <div className="mt-5 grid  gap-2">
               <span>SHIPPING</span>
-              <div className="flex gap-5 items-center">
+              <div className="block gap-5 items-center">
                 <Image
                   src={"/images/assets/static/footer/jne.png"}
                   width={64}

@@ -36,7 +36,7 @@ const ShopByCategory = () => {
             key={category.id}
             className="relative overflow-hidden grid  grid-cols-1 lg:grid-cols-2 items-center h-80 bg-white shadow-sm hover:shadow-lg rounded-md"
           >
-            <div className="w-full h-[700px] lg:h-full">
+            <div className="block w-full h-[700px] lg:h-full">
               <Image
                 src={category.image}
                 alt={category.title}
@@ -44,7 +44,7 @@ const ShopByCategory = () => {
                 height={330}
                 layout="responsive"
                 objectPosition="center"
-                loading="lazy"
+                priority={true}
               />
             </div>
             <div className="absolute lg:static bg-white w-full bottom-0  p-2.5 lg:p-0 flex items-center text-center justify-center">

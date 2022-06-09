@@ -11,7 +11,7 @@ const SliderHome = () => {
             width={400}
             height={480}
             layout="responsive"
-            loading="lazy"
+            priority={true}
             objectPosition="center"
           />
         </div>
@@ -50,7 +50,7 @@ const SliderHome = () => {
               height={300}
               className="object-cover w-full"
               layout="responsive"
-              loading="lazy"
+              priority={true}
               objectPosition="center"
             />
           </div>
