@@ -5,12 +5,17 @@ import OzchicPeople from "../components/home/OzchicPeople";
 import ShopByCategory from "../components/home/ShopByCategory";
 import SliderHome from "../components/home/SliderHome";
 import { Fragment } from "react";
-import Head from "next/head";
+import Seo from "../components/utils/Seo";
 
 export default function Home() {
   return (
     <Fragment>
-      <Head>
+      <Seo
+        description={"Come to my store for great apparel!"}
+        url={"https://ozchic-next.vercel.app/"}
+        title={"Ozchic Store"}
+      />
+      {/*<Head>
         <title>Ozchic App</title>
         <meta
           name="description"
@@ -23,7 +28,7 @@ export default function Home() {
         />
         <meta property="og:url" content="https://ozchic-next.vercel.app/" />
         <meta property="og:type" content="website" />
-      </Head>
+      </Head>*/}
       <SliderHome />
       <LookbookHome />
       <NewArrivalsHome />

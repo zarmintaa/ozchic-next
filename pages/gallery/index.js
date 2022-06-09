@@ -4,6 +4,7 @@ import Loading from "../../components/UI/Loading";
 import CategoryHelper from "./../../lib/ProductHelper";
 import SidebarMenu from "../../components/gallery/SidebarMenu";
 import Head from "next/head";
+import Seo from "../../components/utils/Seo";
 const Gallery = ({ dataProducts }) => {
   const [products, setProducts] = useState(dataProducts);
   const [isLoading, setIsLoading] = useState(true);
@@ -41,9 +42,11 @@ const Gallery = ({ dataProducts }) => {
 
   return (
     <Fragment>
-      <Head>
-        <title>Gallery</title>
-      </Head>
+      <Seo
+        description={"Come to my store for great apparel!"}
+        url={"https://ozchic-next.vercel.app/"}
+        title={"Ozchic Store | Gallery"}
+      />
       <div className="flex">
         {!sidebarToggle && (
           <div className="relative">

@@ -4,11 +4,12 @@ import {
   updateCountProduct,
 } from "../lib/cart-product";
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import OrderForm from "../components/cart/OrderForm";
 import ListCartOrder from "../components/cart/ListCartOrder";
 import Order from "../components/cart/Order";
+import Seo from "../components/utils/Seo";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -83,25 +84,32 @@ const Cart = () => {
   };
 
   return (
-    <section className="w-full lg:w-9/12 mx-auto grid lg:grid-cols-[2fr,_1fr] gap-5  my-10">
-      <ListCartOrder products={products} updateProduct={updateProduct} />
-
-      <Order
-        orderToggle={orderToggle}
-        price={price}
-        setOrderToggle={setOrderToggle}
-        totalItems={totalItems}
+    <Fragment>
+      <Seo
+        description={"Sesuaikan produk kamu dari kami untuk kamu beli"}
+        url={"https://ozchic-next.vercel.app/cart/"}
+        title={"Ozchic Store | Cart"}
       />
+      <section className="w-full lg:w-9/12 mx-auto grid lg:grid-cols-[2fr,_1fr] gap-5  my-10">
+        <ListCartOrder products={products} updateProduct={updateProduct} />
 
-      {orderToggle && (
-        <OrderForm
-          addressInput={addressInput}
-          nameInput={nameInput}
-          phoneInput={phoneInput}
-          submitFormHandler={submitFormHandler}
+        <Order
+          orderToggle={orderToggle}
+          price={price}
+          setOrderToggle={setOrderToggle}
+          totalItems={totalItems}
         />
-      )}
-    </section>
+
+        {orderToggle && (
+          <OrderForm
+            addressInput={addressInput}
+            nameInput={nameInput}
+            phoneInput={phoneInput}
+            submitFormHandler={submitFormHandler}
+          />
+        )}
+      </section>
+    </Fragment>
   );
 };
 

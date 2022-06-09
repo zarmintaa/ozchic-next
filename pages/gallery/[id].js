@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
+import { useState, useEffect, Fragment } from "react";
+
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -11,8 +11,9 @@ import {
   unsetFavProduct,
 } from "../../lib/cart-product";
 import Loading from "../../components/UI/Loading";
-import ProductRating from "../../components/product/ProductRating";
+
 import ProductDetail from "../../components/gallery/ProductDetail";
+import Seo from "../../components/utils/Seo";
 
 const DetailProduct = ({ dataProduct }) => {
   const router = useRouter();
@@ -75,29 +76,36 @@ const DetailProduct = ({ dataProduct }) => {
   }, [product, product.id, isFavProduct]);
 
   return (
-    <section className="text-gray-700 body-font overflow-hidden bg-white">
-      <div className="container px-5 py-5 mx-auto">
-        {isLoading && <Loading />}
-        {!isLoading && (
-          <ProductDetail
-            product={product}
-            addFavProductHandler={addFavProductHandler}
-            classFav={classFav}
-          />
-        )}
-      </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
+    <Fragment>
+      <Seo
+        description={product.description}
+        url={`https://ozchic-next.vercel.app/gallery/${product.id}`}
+        title={`Ozchic Store | ${product.name}`}
       />
-    </section>
+      <section className="text-gray-700 body-font overflow-hidden bg-white">
+        <div className="container px-5 py-5 mx-auto">
+          {isLoading && <Loading />}
+          {!isLoading && (
+            <ProductDetail
+              product={product}
+              addFavProductHandler={addFavProductHandler}
+              classFav={classFav}
+            />
+          )}
+        </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </section>
+    </Fragment>
   );
 };
 
