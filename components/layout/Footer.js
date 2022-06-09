@@ -28,6 +28,8 @@ const Footer = () => {
                   width={64}
                   height={26}
                   alt="jne"
+                  loading="lazy"
+                  layout="intrinsic"
                 />
 
                 <Image
@@ -35,6 +37,8 @@ const Footer = () => {
                   width={120}
                   height={26}
                   alt="jnt"
+                  loading="lazy"
+                  layout="intrinsic"
                 />
               </div>
             </div>
@@ -48,6 +52,7 @@ const Footer = () => {
                 height={26}
                 layout="fixed"
                 alt="jne"
+                loading="lazy"
               />
             </div>
             <div className="mt-5 grid  gap-2">
@@ -59,6 +64,7 @@ const Footer = () => {
                   height={59}
                   layout="fixed"
                   alt="payment support"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -123,6 +129,7 @@ const Footer = () => {
               width={310}
               height={180}
               layout="responsive"
+              loading="lazy"
             />
             <div className="flex items-center  mt-2">
               <button
