@@ -65,9 +65,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 mt-10 lg:mt-0">
-          <div className=" grid gap-2">
-            <span className="font-semibold">CONTACT</span>
+          <div className="grid">
             <ul className="flex flex-col gap-2 leading-loose">
+              <li>
+                <span className="font-semibold">CONTACT</span>
+              </li>
               <li className="flex gap-2 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

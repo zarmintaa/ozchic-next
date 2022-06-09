@@ -35,17 +35,17 @@ const Navbar = () => {
             <ul className="flex items-center w-full h-full text-md font-light uppercase justify-center gap-x-8 font-f-poppins">
               <li>
                 <ActiveLink href="/gallery" activeClassName="font-semibold">
-                  <p>Gallery</p>
+                  <p className="cursor-pointer">Gallery</p>
                 </ActiveLink>
               </li>
               <li>
                 <ActiveLink href="/lookbook" activeClassName="font-semibold">
-                  <p>LookBook</p>
+                  <p className="cursor-pointer">LookBook</p>
                 </ActiveLink>
               </li>
               <li>
                 <ActiveLink activeClassName="font-semibold" href="/inspiration">
-                  <p>Inspiration</p>
+                  <p className="cursor-pointer">Inspiration</p>
                 </ActiveLink>
               </li>
             </ul>

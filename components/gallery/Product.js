@@ -5,7 +5,7 @@ const Products = (props) => {
   const { item } = props;
   return (
     <Link href={`/gallery/${item.id}`} passHref>
-      <div className="relative overflow-hidden grid items-center shadow-sm hover:shadow-lg rounded-md w-full">
+      <div className="relative overflow-hidden grid items-center shadow-sm hover:shadow-lg rounded-md w-full cursor-pointer">
         <div className="block w-[400px] lg:w-full">
           <Image
             className="object-cover hover:scale-125 hover:transition hover:duration-500"
