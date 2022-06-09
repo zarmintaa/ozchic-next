@@ -12,6 +12,17 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>Ozchic App</title>
+        <meta
+          name="description"
+          content="Come to my store for great apparel!"
+        />
+        <meta property="og:title" content="Ozchic Store" />
+        <meta
+          property="og:description"
+          content="Come to my store for great apparel!"
+        />
+        <meta property="og:url" content="https://ozchic-next.vercel.app/" />
+        <meta property="og:type" content="website" />
       </Head>
       <SliderHome />
       <LookbookHome />
