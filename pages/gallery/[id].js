@@ -18,6 +18,7 @@ const DetailProduct = ({ dataProduct }) => {
   const [product, setProduct] = useState(dataProduct);
   const [isFavProduct, setIsFavProduct] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [classFav, setClassFav] = useState("text-gray-500");
 
   const addFavProductHandler = () => {
     if (isFavProduct) {
@@ -31,8 +32,12 @@ const DetailProduct = ({ dataProduct }) => {
         draggable: true,
         progress: undefined,
       });
+      setClassFav("text-gray-500");
+      setProduct(dataProduct);
+      setIsFavProduct(false);
     } else {
       setFavProduct(product);
+      setProduct(dataProduct);
       toast.success("Menambah produk ke keranjang.", {
         position: "top-right",
         autoClose: 1000,
@@ -42,6 +47,8 @@ const DetailProduct = ({ dataProduct }) => {
         draggable: true,
         progress: undefined,
       });
+      setClassFav("text-red-500");
+      setIsFavProduct(true);
     }
   };
 
@@ -50,18 +57,6 @@ const DetailProduct = ({ dataProduct }) => {
       setIsLoading(false);
     }
   }, [product]);
-
-  useEffect(() => {
-    if (product) {
-      const fav = isFavProductExist(product.id);
-
-      if (fav !== -1) {
-        setIsFavProduct(true);
-      } else {
-        setIsFavProduct(false);
-      }
-    }
-  }, [product, product.id]);
 
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
@@ -187,9 +182,7 @@ const DetailProduct = ({ dataProduct }) => {
                 </button>
                 <button
                   onClick={addFavProductHandler}
-                  className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center ml-4 ${
-                    isFavProduct ? "text-red-500" : "text-gray-500"
-                  }`}
+                  className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center ml-4 ${classFav}`}
                 >
                   <svg
                     fill="currentColor"
