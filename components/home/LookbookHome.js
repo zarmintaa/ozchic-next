@@ -16,6 +16,7 @@ const LookbookHome = () => {
               width={380}
               height={470}
               layout="responsive"
+              objectPosition="center"
               className="w-full h-full object-cover"
             />
           </div>
@@ -44,6 +45,7 @@ const LookbookHome = () => {
               width={380}
               height={470}
               layout="responsive"
+              objectPosition="center"
             />
           </div>
           <div className="backdrop-brightness-50 bg-black/30 absolute w-full h-full"></div>

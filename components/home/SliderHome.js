@@ -11,6 +11,7 @@ const SliderHome = () => {
             width={400}
             height={480}
             layout="responsive"
+            objectPosition="center"
           />
         </div>
         <div className=" flex-col justify-center items-center bg-black text-white hidden  lg:flex">
@@ -48,6 +49,7 @@ const SliderHome = () => {
               height={300}
               className="object-cover w-full"
               layout="responsive"
+              objectPosition="center"
             />
           </div>
         </div>
