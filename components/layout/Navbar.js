@@ -3,9 +3,9 @@ import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+config.autoAddCss = false;
 import { faBars, faX, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {

@@ -23,7 +23,7 @@ const categoryData = [
   },
 ];
 
-const ShopByCategory = (props) => {
+const ShopByCategory = () => {
   return (
     <div className="bg-gray-200 min-h-screen py-10 lg:py-20">
       <div className="flex items-center justify-center mb-20">
