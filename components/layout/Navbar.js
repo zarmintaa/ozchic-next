@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import ActiveLink from "./activeLink";
+import ActiveLink from "./ActiveLink";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS

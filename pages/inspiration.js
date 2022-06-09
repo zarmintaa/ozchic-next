@@ -22,6 +22,7 @@ const Inspiration = () => {
             alt="clock"
             width={20}
             height={20}
+            layout="responsive"
           />
           <time>June 30 2020</time>
         </div>
