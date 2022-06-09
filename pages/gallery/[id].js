@@ -58,6 +58,20 @@ const DetailProduct = ({ dataProduct }) => {
     }
   }, [product]);
 
+  useEffect(() => {
+    if (product) {
+      const isFav = isFavProductExist(+product.id);
+      console.log(isFav);
+      if (isFav !== -1) {
+        setClassFav("text-red-500");
+        setIsFavProduct(true);
+      } else {
+        setClassFav("text-gray-500");
+        setIsFavProduct(false);
+      }
+    }
+  }, [product, product.id, isFavProduct]);
+
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
       <div className="container px-5 py-5 mx-auto">
@@ -219,8 +233,6 @@ export default DetailProduct;
 
 export async function getStaticProps(context) {
   const { id } = context.params;
-  console.log(id);
-  // const response = await fetch("http://localhost:3000/api/v1/products");
   const response = await fetch(
     "https://ozchic-next.vercel.app/api/v1/products"
   );

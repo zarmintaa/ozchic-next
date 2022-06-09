@@ -1,24 +1,17 @@
-import Head from "next/head";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import CartProvider from "../../store/CartProvider";
+import { Fragment } from "react";
 
 const Layout = (props) => {
   return (
-    <>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          strategy="beforeInteractive"
-        />
-      </Head>
+    <Fragment>
       <CartProvider>
         <Navbar />
         <main>{props.children}</main>
         <Footer />
       </CartProvider>
-    </>
+    </Fragment>
   );
 };
 

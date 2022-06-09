@@ -13,6 +13,7 @@ const Lookbook = () => {
           className="object-cover w-full h-full"
           width={700}
           height={800}
+          layout="responsive"
         />
         <div className="flex flex-col py-5 relative">
           <hr className="bg-black" />
@@ -37,6 +38,7 @@ const Lookbook = () => {
               alt="havva scarf"
               width={500}
               height={385}
+              layout="responsive"
             />
           </div>
         </div>
