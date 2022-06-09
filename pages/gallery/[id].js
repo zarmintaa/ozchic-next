@@ -19,17 +19,9 @@ const DetailProduct = ({ dataProduct }) => {
   const [isFavProduct, setIsFavProduct] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // const getProduct = useCallback(async () => {
-  //   const response = await fetch(`/api/v1/products/${id}`);
-  //   const result = await response.json();
-  //   setProduct(result.product);
-  //   setIsLoading(false);
-  // }, [id]);
-
   const addFavProductHandler = () => {
     if (isFavProduct) {
       unsetFavProduct(+id);
-      // getProduct();
       toast.error("Menghapus produk dari keranjang!", {
         position: "top-right",
         autoClose: 1000,
@@ -41,7 +33,6 @@ const DetailProduct = ({ dataProduct }) => {
       });
     } else {
       setFavProduct(product);
-      // getProduct();
       toast.success("Menambah produk ke keranjang.", {
         position: "top-right",
         autoClose: 1000,

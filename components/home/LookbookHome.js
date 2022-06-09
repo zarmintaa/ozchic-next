@@ -8,20 +8,15 @@ const LookbookHome = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 px-5 lg:px-0 mx-auto items-center justify-between w-full lg:w-8/12 font-f-unna text-white gap-5">
-        {/* Lookbook Card Home */}
         <div className="relative overflow-hidden flex items-center shadow-lg">
-          {/*<img*/}
-          {/*  className="w-full h-full"*/}
-          {/*  src="./images/assets/static/lookbook/lookbook-home-1.png"*/}
-          {/*  alt="lookbook"*/}
-          {/*/>*/}
           <div className="w-full h-full">
             <Image
               src={"/images/assets/static/lookbook/lookbook-home-1.png"}
               alt="lookbook"
-              width={500}
-              height={620}
+              width={380}
+              height={470}
               layout="responsive"
+              className="w-full h-full object-cover"
             />
           </div>
 
@@ -29,7 +24,9 @@ const LookbookHome = () => {
           <div className="absolute w-full bottom-10">
             <div className="w-9/12 mx-auto bottom-10 flex flex-col gap-10">
               <div className="font-f-unna">
-                <h1 className="text-4xl lg:text-5xl">Unique style for your uniqeness.</h1>
+                <h1 className="text-4xl lg:text-5xl">
+                  Unique style for your uniqeness.
+                </h1>
               </div>
               <div className="lookbook__content--button font-f-poppins">
                 <button className="py-4 px-16 tracking-wider bg-black rounded-bl-lg rounded-tr-lg text-lg lg:text-xl">
@@ -39,19 +36,13 @@ const LookbookHome = () => {
             </div>
           </div>
         </div>
-        {/* Card right */}
         <div className="relative overflow-hidden flex items-center shadow-lg">
-          {/*<img*/}
-          {/*  className="w-full h-full"*/}
-          {/*  src="./images/assets/static/lookbook/lookbook-home-2.png"*/}
-          {/*  alt="lookbook"*/}
-          {/*/>*/}
           <div className="w-full h-full">
             <Image
               src={"/images/assets/static/lookbook/lookbook-home-2.png"}
               alt="lookbook"
-              width={500}
-              height={620}
+              width={380}
+              height={470}
               layout="responsive"
             />
           </div>
@@ -59,7 +50,9 @@ const LookbookHome = () => {
           <div className="absolute w-full bottom-10">
             <div className="w-9/12 mx-auto bottom-10 flex flex-col gap-10">
               <div className="font-f-unna">
-                <h1 className="text-4xl lg:text-5xl">After all we’ll be back to basic.</h1>
+                <h1 className="text-4xl lg:text-5xl">
+                  After all we’ll be back to basic.
+                </h1>
               </div>
               <div className=" font-f-poppins">
                 <button className="py-4 px-16 tracking-wider bg-black rounded-bl-lg rounded-tr-lg text-lg lg:text-xl">

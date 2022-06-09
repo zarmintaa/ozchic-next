@@ -5,20 +5,6 @@ import { countFavProduct } from "../../lib/cart-product";
 
 const Navbar = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
-  const [cartIsFilled, setCartIsFilled] = useState(false);
-  const [favProducts, setFavProducts] = useState(0);
-
-  const getProductFromLocalstorage = useCallback(() => {
-    const countCart = countFavProduct();
-    if (countCart > 0) {
-      setFavProducts(countCart);
-    }
-    // console.log(countCart);
-  }, []);
-
-  useEffect(() => {
-    getProductFromLocalstorage();
-  }, [getProductFromLocalstorage]);
 
   return (
     <div className="border-b border-solid">
@@ -68,11 +54,6 @@ const Navbar = () => {
                   <button type="button" className="">
                     <i className="fa-solid fa-cart-shopping text-2xl"></i>
                   </button>
-                  {cartIsFilled && (
-                    <span className="absolute top-0 right-0 w-3.5 h-3.5 text-xs text-center rounded-lg bg-red-700 text-white">
-                      {1}
-                    </span>
-                  )}
                 </div>
               </Link>
             </div>

@@ -4,15 +4,16 @@ const SliderHome = () => {
   return (
     <section className="h-auto w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-slider-top">
-        <div className="content__item--left pb-5 hidden md:block">
+        <div className="content__item--left pb-5 hidden md:block w-full">
           <Image
             src={"/images/assets/static/slider/1/slider_image_1-left.png"}
             alt="pict left"
-            width={600}
-            height={700}
+            width={400}
+            height={480}
+            layout="responsive"
           />
         </div>
-        <div className="flex flex-col justify-center items-center bg-black text-white hidden  lg:flex">
+        <div className=" flex-col justify-center items-center bg-black text-white hidden  lg:flex">
           <div className="flex flex-col w-2/4">
             <h1 className="font-f-unna text-center whitespace-nowrap inline text-10xl font-semibold">
               5%
@@ -38,19 +39,15 @@ const SliderHome = () => {
               your busy day.
             </p>
           </div>
-          {/*<img*/}
-          {/*  className="object-cover w-full mt-8"*/}
-          {/*  src="./images/assets/static/slider/1/slider_image_1-right.png"*/}
-          {/*  alt="slider"*/}
-          {/*/>*/}
+
           <div className="px-5 lg:px-0 mt-8">
             <Image
               src="/images/assets/static/slider/1/slider_image_1-right.png"
               alt="pict right"
-              width={800}
-              height={500}
+              width={400}
+              height={300}
               className="object-cover w-full"
-              layout={"responsive"}
+              layout="responsive"
             />
           </div>
         </div>
