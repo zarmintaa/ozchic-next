@@ -44,6 +44,7 @@ const ShopByCategory = () => {
                 height={330}
                 layout="responsive"
                 objectPosition="center"
+                loading="lazy"
               />
             </div>
             <div className="absolute lg:static bg-white w-full bottom-0  p-2.5 lg:p-0 flex items-center text-center justify-center">

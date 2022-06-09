@@ -14,6 +14,7 @@ const InspirationHome = () => {
             width={500}
             height={500}
             alt="inspiration"
+            loading="lazy"
             layout="responsive"
           />
         </div>

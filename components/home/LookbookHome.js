@@ -17,6 +17,7 @@ const LookbookHome = () => {
               height={470}
               layout="responsive"
               objectPosition="center"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>

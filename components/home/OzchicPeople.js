@@ -40,6 +40,7 @@ const OzchicPeople = () => {
               alt={image.alt}
               layout="responsive"
               objectPosition="center"
+              loading="lazy"
             />
           </div>
         ))}

@@ -13,7 +13,7 @@ const Products = (props) => {
             alt={item.name}
             width={300}
             height={380}
-            priority={true}
+            loading="lazy"
             layout="responsive"
             objectPosition="center"
           />
