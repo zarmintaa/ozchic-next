@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import Products from "../../components/gallery/Product";
 import Loading from "../../components/UI/Loading";
 import CategoryHelper from "./../../lib/ProductHelper";
 import SidebarMenu from "../../components/gallery/SidebarMenu";
+import Head from "next/head";
 const Gallery = ({ dataProducts }) => {
   const [products, setProducts] = useState(dataProducts);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,43 +40,48 @@ const Gallery = ({ dataProducts }) => {
   }, [fetchProductHandler, categoryProduct]);
 
   return (
-    <div className="flex">
-      {!sidebarToggle && (
-        <div className="relative">
-          <div className="flex absolute w-32 gap-2 items-center px-2 py-2 justify-center bg-teal-500 text-white rounded-md mt-2 ml-5">
-            <button
-              onClick={() => setSidebarToggle(!sidebarToggle)}
-              type="button"
-            >
-              Open Sidebar
-            </button>
+    <Fragment>
+      <Head>
+        <title>Gallery</title>
+      </Head>
+      <div className="flex">
+        {!sidebarToggle && (
+          <div className="relative">
+            <div className="flex absolute w-32 gap-2 items-center px-2 py-2 justify-center bg-teal-500 text-white rounded-md mt-2 ml-5">
+              <button
+                onClick={() => setSidebarToggle(!sidebarToggle)}
+                type="button"
+              >
+                Open Sidebar
+              </button>
+            </div>
+          </div>
+        )}
+        {sidebarToggle && (
+          <SidebarMenu
+            searchChangeHandler={searchChangeHandler}
+            setSidebarToggle={setSidebarToggle}
+            setToggle={setToggle}
+            sidebarToggle={sidebarToggle}
+            toggle={toggle}
+            setCategoryProduct={setCategoryProduct}
+          />
+        )}
+        <div className="bg-gray-100 w-full">
+          {isLoading && <Loading />}
+
+          <div
+            className={`grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 p-5 gap-5  overflow-auto justify-center items-center ${
+              !sidebarToggle ? "mt-8" : ""
+            }`}
+          >
+            {products?.map((item) => (
+              <Products item={item} key={item.id} />
+            ))}
           </div>
         </div>
-      )}
-      {sidebarToggle && (
-        <SidebarMenu
-          searchChangeHandler={searchChangeHandler}
-          setSidebarToggle={setSidebarToggle}
-          setToggle={setToggle}
-          sidebarToggle={sidebarToggle}
-          toggle={toggle}
-          setCategoryProduct={setCategoryProduct}
-        />
-      )}
-      <div className="bg-gray-100 w-full">
-        {isLoading && <Loading />}
-
-        <div
-          className={`grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 p-5 gap-5 min-h-full overflow-auto justify-center items-center ${
-            !sidebarToggle ? "mt-8" : ""
-          }`}
-        >
-          {products?.map((item) => (
-            <Products item={item} key={item.id} />
-          ))}
-        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
