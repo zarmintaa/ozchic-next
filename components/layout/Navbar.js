@@ -73,6 +73,7 @@ const Navbar = () => {
             <div className="flex items-center gap-x-5">
               <div className="text-2xl">
                 <button
+                  aria-label="Icon Toggle"
                   type="button"
                   onClick={() => setSidebarToggle(!sidebarToggle)}
                 >
