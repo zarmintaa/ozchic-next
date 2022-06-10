@@ -11,7 +11,7 @@ const SliderHome = () => {
             width={400}
             height={480}
             layout="responsive"
-            priority={true}
+            loading="lazy"
             objectPosition="center"
           />
         </div>
