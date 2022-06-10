@@ -9,7 +9,7 @@ const Lookbook = () => {
         description={
           "Welcome to lookbook, search your favorite product from us!."
         }
-        url={"https://ozchic-next.vercel.app/lookbook"}
+        url={"https://ozchic-store.vercel.app/lookbook"}
         title={"Ozchic Store | LookBook"}
       />
       <div className="mb-10 w-full lg:w-9/12 px-5 lg:px-0 mx-auto">

@@ -12,7 +12,7 @@ export default function Home() {
     <Fragment>
       <Seo
         description={"Come to my store for great apparel!"}
-        url={"https://ozchic-next.vercel.app/"}
+        url={"https://ozchic-store.vercel.app/"}
         title={"Ozchic Store"}
       />
       <SliderHome />

@@ -91,7 +91,7 @@ const Gallery = ({ dataProducts }) => {
 export default Gallery;
 
 export async function getStaticProps(context) {
-  const res = await fetch("https://ozchic-next.vercel.app/api/v1/products");
+  const res = await fetch("https://ozchic-store.vercel.app/api/v1/products");
   const data = await res.json();
 
   return {

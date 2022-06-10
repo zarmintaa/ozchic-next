@@ -114,7 +114,7 @@ export default DetailProduct;
 export async function getStaticProps(context) {
   const { id } = context.params;
   const response = await fetch(
-    "https://ozchic-next.vercel.app/api/v1/products"
+    "https://ozchic-store.vercel.app/api/v1/products"
   );
   const data = await response.json();
   const dataProduct = data.products.find((product) => product.id === +id);
@@ -128,9 +128,8 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths(context) {
-  // const response = await fetch("http://localhost:3000/api/v1/products");
   const response = await fetch(
-    "https://ozchic-next.vercel.app/api/v1/products"
+    "https://ozchic-store.vercel.app/api/v1/products"
   );
   const data = await response.json();
   const paths = data.products.map((product) => ({

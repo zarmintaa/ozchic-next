@@ -87,7 +87,7 @@ const Cart = () => {
     <Fragment>
       <Seo
         description={"Sesuaikan produk kamu dari kami untuk kamu beli"}
-        url={"https://ozchic-next.vercel.app/cart/"}
+        url={"https://ozchic-store.vercel.app/cart/"}
         title={"Ozchic Store | Cart"}
       />
       <section className="w-full lg:w-9/12 mx-auto grid lg:grid-cols-[2fr,_1fr] gap-5  my-10">

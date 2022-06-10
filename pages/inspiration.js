@@ -10,7 +10,7 @@ const Inspiration = () => {
         description={
           "Come to my store and get apparel for our inspiration catalogue."
         }
-        url={"https://ozchic-next.vercel.app/inspiration"}
+        url={"https://ozchic-store.vercel.app/inspiration"}
         title={"Ozchic Store | Inspiration"}
       />
       <div className="grid lg:grid-cols-2 px-5 lg:px-0 my-10 min-h-screen">
