@@ -7,7 +7,7 @@ import SliderHome from "../components/home/SliderHome";
 import { Fragment } from "react";
 import Seo from "../components/utils/Seo";
 
-export default function Home() {
+export default function Home({ dataProducts }) {
   return (
     <Fragment>
       <Seo
@@ -17,10 +17,23 @@ export default function Home() {
       />
       <SliderHome />
       <LookbookHome />
-      <NewArrivalsHome />
+      <NewArrivalsHome dataProducts={dataProducts} />
       <ShopByCategory />
       <OzchicPeople />
       <InspirationHome />
     </Fragment>
   );
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch(
+    "https://ozchic-store.vercel.app/api/v1/products/featured"
+  );
+  const data = await res.json();
+
+  return {
+    props: {
+      dataProducts: data.products,
+    },
+  };
 }

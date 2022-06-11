@@ -3,8 +3,8 @@ import Products from "../../components/gallery/Product";
 import Loading from "../../components/UI/Loading";
 import CategoryHelper from "./../../lib/ProductHelper";
 import SidebarMenu from "../../components/gallery/SidebarMenu";
-import Head from "next/head";
 import Seo from "../../components/utils/Seo";
+
 const Gallery = ({ dataProducts }) => {
   const [products, setProducts] = useState(dataProducts);
   const [isLoading, setIsLoading] = useState(true);

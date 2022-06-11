@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
 import Products from "../gallery/Product";
 import { useRouter } from "next/router";
 
-const NewArrivalsHome = () => {
-  const [products, setProducts] = useState([]);
+const NewArrivalsHome = ({ dataProducts }) => {
   const router = useRouter();
-
-  useEffect(() => {
-    fetch("/api/v1/products/featured")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data.products);
-      });
-  }, []);
 
   return (
     <section className="bg-gray-100 py-10 lg:py-20">
@@ -20,7 +10,7 @@ const NewArrivalsHome = () => {
         <h1 className="font-f-unna text-5xl lg:text-6xl">New Arrivals</h1>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 mx-auto px-5 lg:px-0 items-center justify-center w-full lg:w-8/12 font-f-unna gap-x-5 text-white gap-y-5">
-        {products.map((item) => (
+        {dataProducts.map((item) => (
           <Products item={item} key={item.id} />
         ))}
       </div>
