@@ -3,7 +3,6 @@ import {
   setProductToLocalStorage,
   updateCountProduct,
 } from "../lib/cart-product";
-import Image from "next/image";
 import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import OrderForm from "../components/cart/OrderForm";

@@ -16,7 +16,7 @@ const Navbar = () => {
       <header className="hidden lg:flex py-6 w-full px-6 mx-auto items-center">
         <nav className="flex w-full justify-between items-center">
           <div className="flex text-center gap-8">
-            <div>
+            <div className="cursor-pointer">
               <ActiveLink activeClassName="font-semibold" href="/">
                 <svg
                   width="125"
@@ -46,6 +46,11 @@ const Navbar = () => {
               <li>
                 <ActiveLink activeClassName="font-semibold" href="/inspiration">
                   <p className="cursor-pointer">Inspiration</p>
+                </ActiveLink>
+              </li>{" "}
+              <li>
+                <ActiveLink activeClassName="font-semibold" href="/article">
+                  <p className="cursor-pointer">Article</p>
                 </ActiveLink>
               </li>
             </ul>

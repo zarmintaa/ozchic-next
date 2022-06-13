@@ -1,27 +1,30 @@
-import Image from "next/image";
 import Seo from "../components/utils/Seo";
+import Image from "next/image";
 import { Fragment } from "react";
-const Inspiration = () => {
+
+const Article = () => {
   const image1 =
     "/images/assets/static/inspiration/street-photography-of-woman-wearing-blue-coat.png";
   return (
     <Fragment>
       <Seo
         description={
-          "Come to my store and get apparel for our inspiration catalogue."
+          "Read article from us to get inspiration for your best outfit!"
         }
-        url={"https://ozchic-store.vercel.app/inspiration"}
-        title={"Ozchic Store | Inspiration"}
+        url={"https://ozchic-store.vercel.app/article"}
+        title={"Ozchic Store | Article"}
       />
-      <div className="grid lg:grid-cols-2 px-5 lg:px-0 my-10 min-h-screen">
-        <Image
-          src={image1}
-          height={720}
-          width={720}
-          alt="inspiration"
-          className="object-cover w-full h-full"
-          layout="responsive"
-        />
+      <main className="w-full lg:w-7/12 mx-2.5 lg:mx-auto">
+        <div className="py-10 w-full lg:w-[40rem] mx-0 lg:mx-auto">
+          <Image
+            src={image1}
+            height={720}
+            width={720}
+            alt="inspiration"
+            className="object-cover w-full h-full"
+            layout="responsive"
+          />
+        </div>
         <div className="px-5 lg:px-36">
           <h1 className="font-semibold font-f-poppins text-3xl text-slate-700 mt-20 leading-relaxed">
             Here are the tittle of the article you write for your site
@@ -71,13 +74,23 @@ const Inspiration = () => {
             molestie tellus vel, volutpat nisl. Aenean lorem massa, molestie non
             libero a, posuere rutrum diam. Mauris scelerisque congue justo,
           </p>
+          <p className="text-slate-900 mt-5 text-lg leading-7">
+            volutpat ipsum, semper pulvinar leo venenatis non. Mauris auctor
+            euismod odio posuere sodales. Etiam at lacus nec purus molestie
+            elementum eget et sem. Phasellus suscipit quam id purus placerat
+            ultrices. Proin eu arcu fermentum, interdum libero id, pulvinar
+            nunc. Aenean varius hendrerit ipsum sed hendrerit. Vivamus ac
+            dignissim turpis. Phasellus pellentesque dolor ut sapien elementum,
+            nec dictum tortor sagittis. Donec venenatis laoreet tortor sed
+            condimentum.
+          </p>
           <button className="mt-10 bg-white hover:bg-gray-200 text-slate-900 px-10 py-2 rounded-md border-2 font-f-poppins font-semibold border-slate-900">
             Read More
           </button>
         </div>
-      </div>
+      </main>{" "}
     </Fragment>
   );
 };
 
-export default Inspiration;
+export default Article;
