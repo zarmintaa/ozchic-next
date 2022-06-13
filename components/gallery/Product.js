@@ -11,8 +11,8 @@ const Products = (props) => {
             className="object-cover hover:scale-125 hover:transition hover:duration-500"
             src={"/" + item.image}
             alt={item.name}
-            width={300}
-            height={380}
+            width={200}
+            height={250}
             loading="lazy"
             layout="responsive"
             objectPosition="center"
