@@ -27,7 +27,7 @@ export default function Home({ dataProducts }) {
 
 export async function getStaticProps(context) {
   const res = await fetch(
-    "https://ozchic-store.vercel.app/api/v1/products/featured"
+    "https://ozchic-store-api.herokuapp.com/api/v1/products/featured"
   );
   const data = await res.json();
 
